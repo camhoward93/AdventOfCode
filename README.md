@@ -1,2 +1,2 @@
-# AdventOfCode
-Advent of Code Challenges
+# Advent Of Code
+Advent of Code challenges for fun.
