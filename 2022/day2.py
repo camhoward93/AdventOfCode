@@ -28,6 +28,8 @@ with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
 # print largest sum found
 print(totalScore)
 
+
+
 # Part 2
 
 # declare variables
