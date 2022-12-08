@@ -48,3 +48,36 @@ print(prioritySum)
 
 # Part 2
 
+# functions
+def get_priority(letter):
+    # return priority based on case
+    if letter.islower():
+        return ord(letter) - ord('a') + 1
+    else:
+        return ord(letter) - ord('A') + 27
+
+
+# declare variables
+prioritySum = 0
+
+# open the file
+with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
+    # pull all the lines
+    lines = [line.strip() for line in file]
+
+# create the list of each elf group
+groups = [lines[x:x+3] for x in range(0, len(lines), 3)]
+
+# loop over the groups
+for group in groups:
+    foundChars = ""
+    # check each character of the first line for a match in the next two
+    for character in group[0]:
+        # if there is a duplicate
+        if group[1].find(character) != -1 and group[2].find(character) != -1 and foundChars.find(character) == -1:
+            # add to the priority sum and add the found char
+            prioritySum += get_priority(character)
+            foundChars += character
+
+# print priority sum
+print(prioritySum)
