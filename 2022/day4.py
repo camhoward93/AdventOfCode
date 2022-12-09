@@ -6,6 +6,7 @@
 # functions
 def is_overlap(elf1, elf2):
     if len(elf1) == 2 and len(elf2) == 2:
+        # make sure you compare these as ints and not strings... took a while to find that error
         if (int(elf1[0]) >= int(elf2[0]) and int(elf1[1]) <= int(elf2[1]))\
                 or (int(elf2[0]) >= int(elf1[0]) and int(elf2[1]) <= int(elf1[1])):
             return True
