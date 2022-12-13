@@ -4,8 +4,8 @@
 # Part 1
 
 # declare variables
-largestSum = 0
-currentSum = 0
+largest_sum = 0
+current_sum = 0
 
 # open the file
 with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
@@ -13,25 +13,25 @@ with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
     for line in file:
         # if line is not blank, add to sum
         if line.strip():
-            currentSum += int(line)
+            current_sum += int(line)
         # if line is blank, check sum values
         else:
-            if currentSum > largestSum:
-                largestSum = currentSum
+            if current_sum > largest_sum:
+                largest_sum = current_sum
 
             # reset current sum
-            currentSum = 0
+            current_sum = 0
 
 # print largest sum found
-print(largestSum)
+print(largest_sum)
 
 
 
 # Part 2
 
 # declare variables
-largestSums = [0, 0, 0]
-currentSum = 0
+largest_sums = [0, 0, 0]
+current_sum = 0
 
 # open the file
 with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
@@ -39,16 +39,16 @@ with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
     for line in file:
         # if line is not blank, add to sum
         if line.strip():
-            currentSum += int(line)
+            current_sum += int(line)
         # if line is blank, check sum values
         else:
-            if currentSum > largestSums[0]:
-                largestSums[0] = currentSum
-                largestSums.sort()
+            if current_sum > largest_sums[0]:
+                largest_sums[0] = current_sum
+                largest_sums.sort()
 
             # reset current sum
-            currentSum = 0
+            current_sum = 0
 
 # print largest sum found
-print(largestSums)
-print(sum(largestSums))
+print(largest_sums)
+print(sum(largest_sums))
