@@ -15,7 +15,7 @@ def is_overlap(elf1, elf2):
 
 
 # declare variables
-numOverlaps = 0
+num_overlaps = 0
 
 # open the file
 with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
@@ -27,15 +27,15 @@ with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
             split = line.strip().split(',')
 
             # split the pairs into min / max section numbers
-            firstElf = split[0].split('-')
-            secondElf = split[1].split('-')
+            first_elf = split[0].split('-')
+            second_elf = split[1].split('-')
 
             # find the max of the min between them
-            if is_overlap(firstElf, secondElf):
-                numOverlaps += 1
+            if is_overlap(first_elf, second_elf):
+                num_overlaps += 1
 
 # print number of overlaps
-print(numOverlaps)
+print(num_overlaps)
 
 
 
@@ -55,7 +55,7 @@ def is_overlap(elf1, elf2):
 
 
 # declare variables
-numOverlaps = 0
+num_overlaps = 0
 
 # open the file
 with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
@@ -67,12 +67,12 @@ with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
             split = line.strip().split(',')
 
             # split the pairs into min / max section numbers
-            firstElf = split[0].split('-')
-            secondElf = split[1].split('-')
+            first_elf = split[0].split('-')
+            second_elf = split[1].split('-')
 
             # find the max of the min between them
-            if is_overlap(firstElf, secondElf):
-                numOverlaps += 1
+            if is_overlap(first_elf, second_elf):
+                num_overlaps += 1
 
 # print number of overlaps
-print(numOverlaps)
+print(num_overlaps)
