@@ -17,7 +17,7 @@ def get_priority(letter):
 
 
 # declare variables
-prioritySum = 0
+priority_sum = 0
 
 # open the file
 with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
@@ -31,18 +31,18 @@ with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
             else:
                 # split the string to get both sack pockets
                 sack1, sack2 = split_string(line.strip())
-                foundChars = ""
+                found_chars = ""
 
                 # for each item in sack1, check if it's in sack2
                 for x in sack1:
                     # if there is a duplicate
-                    if sack2.find(x) != -1 and foundChars.find(x) == -1:
+                    if sack2.find(x) != -1 and found_chars.find(x) == -1:
                         # add to the priority sum and add the found char
-                        prioritySum += get_priority(x)
-                        foundChars += x
+                        priority_sum += get_priority(x)
+                        found_chars += x
 
 # print priority sum
-print(prioritySum)
+print(priority_sum)
 
 
 
@@ -58,7 +58,7 @@ def get_priority(letter):
 
 
 # declare variables
-prioritySum = 0
+priority_sum = 0
 
 # open the file
 with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
@@ -70,14 +70,14 @@ groups = [lines[x:x+3] for x in range(0, len(lines), 3)]
 
 # loop over the groups
 for group in groups:
-    foundChars = ""
+    found_chars = ""
     # check each character of the first line for a match in the next two
     for character in group[0]:
         # if there is a duplicate
-        if group[1].find(character) != -1 and group[2].find(character) != -1 and foundChars.find(character) == -1:
+        if group[1].find(character) != -1 and group[2].find(character) != -1 and found_chars.find(character) == -1:
             # add to the priority sum and add the found char
-            prioritySum += get_priority(character)
-            foundChars += character
+            priority_sum += get_priority(character)
+            found_chars += character
 
 # print priority sum
-print(prioritySum)
+print(priority_sum)
