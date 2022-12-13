@@ -4,7 +4,7 @@
 # Part 1
 
 # declare variables
-totalScore = 0
+total_score = 0
 outcomes = {
     "A X": 4,  # 1 + 3
     "A Y": 8,  # 2 + 6
@@ -23,17 +23,17 @@ with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
     for line in file:
         # if line is not blank
         if line.strip():
-            totalScore += outcomes[line.strip()]
+            total_score += outcomes[line.strip()]
 
 # print largest sum found
-print(totalScore)
+print(total_score)
 
 
 
 # Part 2
 
 # declare variables
-totalScore = 0
+total_score = 0
 outcomes = {
     "A X": 3,  # 0 + 3
     "A Y": 4,  # 3 + 1
@@ -53,7 +53,7 @@ with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
     for line in file:
         # if line is not blank
         if line.strip():
-            totalScore += outcomes[line.strip()]
+            total_score += outcomes[line.strip()]
 
 # print largest sum found
-print(totalScore)
+print(total_score)
