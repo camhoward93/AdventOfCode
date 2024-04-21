@@ -45,7 +45,7 @@ with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
 # initialize number list
 numbers = [int(str(num_dict.get(digits[0], digits[0])) + str(num_dict.get(digits[-1], digits[-1])))
            for line in lines
-           for digits in [re.findall(r'[0-9]|zero|one|two|three|four|five|six|seven|eight|nine|ten', line)]]
+           for digits in [re.findall(r'[0-9]|zero|one|two|three|four|five|six|seven|eight|nine', line)]]
 
 answer = sum(numbers)
 
