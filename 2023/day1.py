@@ -43,20 +43,9 @@ with open('C:\\Users\\camho\\Desktop\\input.txt') as file:
     lines = [line.strip() for line in file]
 
 # initialize number list
-numbers = []
-
-# extract the numbers from each line
-for line in lines:
-    digits = (re.findall(r'[0-9]|zero|one|two|three|four|five|six|seven|eight|nine|ten', line))
-    # correct the numerical digits
-    for index, value in enumerate(digits):
-        if value in num_dict:
-            digits[index] = num_dict[value]
-    # place the first and last digits together in the numbers list
-    numbers.append(int(str(digits[0] + str(digits[-1]))))
-
-# NOTE: I'm sure there is a way to put all of that into a list comprehension, but it would be a monster and likely not
-#   readable.
+numbers = [int(str(num_dict.get(digits[0], digits[0])) + str(num_dict.get(digits[-1], digits[-1])))
+           for line in lines
+           for digits in [re.findall(r'[0-9]|zero|one|two|three|four|five|six|seven|eight|nine|ten', line)]]
 
 answer = sum(numbers)
 
